@@ -1,0 +1,177 @@
+<html> 
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script>
+      function dis(val) 
+         { 
+             document.getElementById("result").value+=val 
+         } 
+           
+         //function that evaluates the digit and return result 
+         function solve() 
+         { 
+             let x = document.getElementById("result").value 
+             let y = eval(x) 
+             document.getElementById("result").value = y 
+         } 
+           
+         //function that clear the display 
+         function clr() 
+         { 
+             document.getElementById("result").value = "" 
+         }
+
+      
+         function myFunction() {
+            var dots = document.getElementById("dots",);
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+
+            if (dots.style.display === "none") {
+
+              dots.style.display = "inline";
+              btnText.innerHTML = "Read more"; 
+              moreText.style.display = "none";
+            } else {
+
+               dots.style.display = "none";
+               btnText.innerHTML = "Read less"; 
+               moreText.style.display = "inline";
+            }
+         }
+
+         function myFunction1() {
+            var dots1 = document.getElementById("dots1");
+            var moreText = document.getElementById("more1");
+            var btnText = document.getElementById("myBtn1");
+
+
+            if (dots1.style.display === "none") {
+
+              dots1.style.display = "inline";
+              btnText.innerHTML = "Read more"; 
+              moreText.style.display = "none";
+            } else {
+
+               dots1.style.display = "none";
+               btnText.innerHTML = "Read less"; 
+               moreText.style.display = "inline";
+            }
+         }
+         function myFunction2() {
+            var dots2 = document.getElementById("dots2");
+            var moreText = document.getElementById("more2");
+            var btnText = document.getElementById("myBtn2");
+
+
+            if (dots2.style.display === "none") {
+
+              dots2.style.display = "inline";
+              btnText.innerHTML = "Read more"; 
+              moreText.style.display = "none";
+            } else {
+
+               dots2.style.display = "none";
+               btnText.innerHTML = "Read less"; 
+               moreText.style.display = "inline";
+            }
+         }
+      </script> 
+      <!-- for styling -->
+      <style>
+         #more,#more1, #more2 {
+            display: none;
+         } 
+         .title{
+
+            margin-bottom: 10px; 
+            text-align:center; 
+            width: 210px; 
+            color:green; 
+            border: solid black 2px; 
+         } 
+  
+         input[type="button"] 
+         { 
+         background-color:green; 
+         color: black; 
+         border: solid black 2px; 
+         width:100% 
+         } 
+  
+         input[type="text"] 
+         { 
+         background-color:white; 
+         border: solid black 2px; 
+         width:100% 
+         }
+         #right{
+            float: right;
+            text-align: center;
+            width: 30%;
+            height: 50%;
+            padding: 10px;
+            background-color: #0075;
+         }
+         #left{
+            float: left;
+            text-align: center;
+            width: 30%;
+            height: 50%;
+            padding: 10px;
+            background-color: red;
+         }
+         #cent{
+            float: center;
+            text-align: center;
+            width: 67%;
+            height: 50%;
+            padding: 10px;
+            background-color: yellow;
+         }
+
+        
+      </style> 
+   </head> 
+   <!-- create table -->
+<body>
+   <div id="right">
+      <img src="kk.jpg"  style="height: 30px; width: 30px; border-style: ridge;box-sizing: ">
+      <p> skirt <span id="dots">beach</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+      <button onclick="myFunction()" id="myBtn">Read more Info.</button><br>
+      <button type="button" value="r"  onclick="dis('120')"/> 120 </button><br>
+
+   </div>
+   <div id="left">
+      <img src="kk.jpg"  style="height: 30px; width: 30px; border-style: ridge;box-sizing: ">
+      <p> Turtle neck <span id="dots1">beach</span><span id="more1">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+      <button onclick="myFunction1()" id="myBtn1">Read more Info.</button><br>
+      <button type="button" value="r"  onclick="dis('1350')"  /> 1350 </button>
+   </div>
+   <div id="cent">
+      <img src="kk.jpg"  style="height: 30px; width: 30px; border-style: ridge;box-sizing: ">
+      <p> Casual Dress <span id="dots2">beach</span><span id="more2">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+      <button onclick="myFunction2()" id="myBtn2">Read more Info.</button><br>
+      <button type="button" value="r"  onclick="dis('1500')"  /> 1500 </button>
+   </div>
+   <center>
+   <div class = title >COST</div>
+
+   <table border="1"> 
+      <tr>
+         <td colspan="3"><input type="text" id="result"/></td>
+            <!-- clr() function will call clr to clear all value -->
+         <td><input type="button" value="c" onclick="clr()"/> </td> 
+      </tr> 
+      <tr>  
+         <td><input type="button" value="ADD" onclick="dis('+')"/> </td> 
+      </tr> 
+      <tr> 
+            <!-- solve function call function solve to evaluate value -->
+         <td><input type="button" value="=" onclick="solve()"/> </td> 
+      </tr> 
+      </table>
+      </center> 
+   </body> 
+</html>    
